@@ -1,0 +1,342 @@
+.wrap{
+    visibility:hidden;
+}
+/* 轮播图 */
+
+.swiper-slide {
+    background: center center / cover no-repeat;
+    height: 500px;
+}
+
+.swiper-slide .content {
+    position: absolute;
+}
+
+.swiper-slide .content .title {
+    line-height: 45px;
+    color: #777;
+    font-size: 16px;
+}
+
+.swiper-slide .content .title-cn {
+    font-size: 32px;
+    color: #747877;
+}
+
+.swiper-slide .content .readmore {
+    width: 85px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 18px;
+    border-radius: 15px;
+    border: 1px solid #5b97c7;
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.swiper-slide .content .readmore:hover {
+    color: #fff;
+    background-color: #5b97c7;
+}
+
+.swiper-slide:nth-child(1) .content {
+    top: 42%;
+    left: 18%;
+    margin-top: -45px;
+}
+
+.swiper-slide:nth-child(2) .content {
+    top: 42%;
+    left: 18%;
+    margin-top: -45px;
+}
+
+.swiper-slide:nth-child(3) .content {
+    top: 42%;
+    right: 15%;
+    margin-top: -45px;
+}
+
+.swiper-slide:nth-child(3) .content .title-en,
+.swiper-slide:nth-child(3) .content .title-cn {
+    color: #fff;
+}
+
+.swiper-slide:nth-child(3) .content .readmore {
+    background-color: #fff;
+}
+
+.swiper-slide:nth-child(3) .content .readmore:hover {
+    background-color: #5b97c7;
+}
+
+/* 轮播图 pagination */
+.swiper-pagination > span {
+    position: relative;
+    width: 50px;
+    height: 2px;
+    margin: 0;
+    border-radius: inherit;
+    opacity: 1;
+    font-size: 16px;
+    background-color: #ccc;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+        background-color: #4087bf;
+    }
+
+
+/* 轮播图结束 */
+
+.product {
+    background-color: #fff;
+}
+
+
+/* 覆盖bootstrap样式 */
+
+.product .col-sm-4 {
+    padding: 0;
+}
+
+.product-item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 130% center;
+    background-size: cover;
+}
+
+.item-one {
+    background-image: url("/images/product_one.jpg");
+}
+
+.item-two {
+    background-image: url("/images/product_two.jpg");
+    background-position: center center;
+}
+
+.item-three {
+    background-image: url("/images/product_three.jpg");
+}
+
+.product-item .title {
+    position: relative;
+    top: 33px;
+    margin-left: 23px;
+    font-size: 18px;
+    color: #333;
+}
+
+.product-item .title.isnew:after {
+    content: "NEW";
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: 40px;
+    height: 14px;
+    border-radius: 12px;
+    font-size: 10px;
+    color: #fff;
+    background-color: #ff4343;
+    text-align: center;
+}
+
+.product-item .more {
+    position: absolute;
+    bottom: 45px;
+    left: 23px;
+    font-size: 14px;
+}
+
+.product-item .more a {
+    line-height: 22px;
+    text-decoration: none;
+    color: #666;
+}
+
+@media (max-width: 1100px) {
+    .product-item .title {
+        margin-left: 5px;
+    }
+    .product-item .more {
+        margin-left: 5px;
+    }
+    .product-item {
+        background-position: 165% center;
+    }
+    .item-two {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-item {
+        background-position: 225% center;
+    }
+    .item-two {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 950px) {
+    .product-item {
+        background-position: 145% center;
+        background-size: auto 75%;
+    }
+    .item-two {
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 833px) {
+    .product-item .title {
+        top: 85px;
+        margin-left: 10px;
+    }
+    .product-item .more {
+        margin-left: 13px;
+        margin-top: 150px;
+    }
+    .product-item {
+        background-position: 100% center;
+        background-size: auto 100%;
+    }
+    .item-two {
+        background-position: center center;
+        background-size: cover;
+    }
+    .item-two .title {
+        margin-left: 25px;
+    }
+    .item-two .more {
+        margin-left: 28px;
+    }
+    .footer .qrcode {
+        display: none;
+    }
+}
+
+
+
+
+
+/* case */
+
+.case-list {
+    width: 100%;
+    background-color: #ccc;
+    opacity: 0.7;
+}
+
+.case-item {
+    display: none;
+    position: relative;
+    float: left;
+    width: 33.333333%;
+    height: 300px;
+    text-align: center;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.case-item a {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 22;
+}
+
+.case-inner {
+    display: inline-block;
+    position: relative;
+    line-height: 30px;
+    margin-top: 10px;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #fff;
+    z-index: 20;
+    opacity: 0;
+}
+
+.case-inner p {
+    line-height: 12px;
+    margin-bottom: 0;
+    padding: 8px 0;
+}
+
+.case-cover {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4087bf;
+    opacity: 0.8;
+    z-index: 18;
+}
+
+.newcase {
+    display: block;
+    width: 70px;
+    height: 18px;
+    line-height: 18px;
+    margin: 8px auto 0;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #ff4343
+}
+
+.waiting {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+}
+
+.waiting-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    margin: -15px 0 0 -100px;
+    text-align: center;
+    color: #fff;
+}
+
+@media(min-width: 768px) {
+    .case-inner {
+        font-size: 16px;
+    }
+    .case-inner p {
+        line-height: 16px;
+    }
+    .case-inner p.enname {
+        font-size: 1.3em;
+    }
+}
+
+@media(min-width: 900px) {
+    .case-inner {
+        font-size: 18px;
+    }
+    .case-inner p {
+        line-height: 18px;
+    }
+    .case-inner p.enname {
+        font-size: 1.4em;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <% include layout/views_header.ejs %>
+        <style type="text/css">
+        .wrap {
+            visibility: visible;
+        }
+        
+        .case-list {
+            width: 1200px;
+            height: 260px;
+            margin: 70px auto 0;
+        }
+        
+        .case-item {
+            height: 260px;
+            margin-top: 20px;
+        }
+        
+        .case-item > div {
+            float: left;
+            height: 100%;
+        }
+        
+        .left {
+            width: 680px;
+        }
+        
+        .left img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .right {
+            width: 520px;
+            line-height: 260px;
+            background-color: #898989;
+        }
+        
+        .right .text {
+            display: inline-block;
+            width: 100%;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .right .text p {
+            line-height: 16px;
+        }
+        
+        .right .text p.title {
+            line-height: 26px;
+            font-size: 22px;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <% include layout/nav.ejs %>
+            <!-- 动态列表 -->
+            <div class="row">
+                <div class="case-list">
+                    <div class="case-item">
+                        <div class="left">
+                            <img src="images/case/case_01.jpg">
+                        </div>
+                        <div class="right">
+                            <div class="text">
+                                <p class="title">香港大学深圳医院</p>
+                                <p>
+                                    Shenzhen Hospital of
+                                    <br> University of Hong Kong</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-item">
+                        <div class="left">
+                            <img src="images/case/case_02.jpg">
+                        </div>
+                        <div class="right">
+                            <div class="text">
+                                <p class="title">复旦大学附属中山医院</p>
+                                <p>
+                                    Zhongshan Hospital Affiliated
+                                    <br>to Fudan University</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-item">
+                        <div class="left">
+                            <img src="images/case/case_03.jpg">
+                        </div>
+                        <div class="right">
+                            <div class="text">
+                                <p class="title">浙江大学医学院附属第一医院</p>
+                                <p>
+                                    The First Affiliated Hospital of
+                                    <br>Zhejiang University Medical College</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-item">
+                        <div class="left">
+                            <img src="images/case/case_04.jpg">
+                        </div>
+                        <div class="right">
+                            <div class="text">
+                                <p class="title">上海交通大学附属仁济医院</p>
+                                <p>
+                                    Renji Hospital Affiliated to
+                                    <br>Shanghai Jiao Tong University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 动态列表结束 -->
+            <% include layout/views_footer.ejs %>
+    </div>
+    <!-- /#wrapper -->
+    <% include layout/views_js.ejs %>
+        </script>
+</body>
+
+</html>

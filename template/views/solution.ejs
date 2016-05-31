@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <% include layout/views_header.ejs %>
+        <style type="text/css">
+        .wrap {
+            visibility: visible;
+        }
+        
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        
+        .col-sm-6 {
+            padding: 0;
+        }
+        
+        #solutionList {
+            padding-top: 50px;
+            box-sizing: content-box;
+        }
+        
+        #solutionList > div {
+            height: 100%;
+            box-sizing: border-box;
+            background-color: #a1a1a1;
+        }
+        
+        #solutionList > div > div {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        
+        #solutionList > div > div:after {
+            position: absolute;
+        }
+        
+        #solutionList > div > div:hover {
+            opacity: 1;
+        }
+        
+        .solution-inner-bg {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .solution-inner-content {
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            width: 390px;
+            margin-left: -195px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .solution-left .solution-inner-bg {
+            background-image: url(/images/solution/solution_left.jpg);
+        }
+        
+        .solution-right .solution-inner-bg {
+            background-image: url(/images/solution/solution_right.jpg);
+        }
+        
+        .title-cn {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        
+        .title-en {
+            font-size: 38px;
+        }
+        
+        .isnew {
+            width: 75px;
+            line-height: 22px;
+            margin: 5px auto 0;
+            border-radius: 15px;
+            background-color: #ff4343;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <% include layout/nav.ejs %>
+            <!-- 案例列表 -->
+            <div class="container-fluid">
+                <div id="solutionList" class="row">
+                    <div class="col-sm-6">
+                        <div class="solution-left">
+                            <a href="/solution/series" target="_blank">
+                                <div class="solution-inner-bg"></div>
+                                <div class="solution-inner-content">
+                                    <div class="title-cn">移动工作站S系列</div>
+                                    <div class="title-en">Medical Cart S Series</div>
+                                    <div class="isnew">全新上市</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="solution-right">
+                            <a href="/solution/chest" target="_blank">
+                                <div class="solution-inner-bg"></div>
+                                <div class="solution-inner-content">
+                                    <div class="title-cn">移动工作站S系列</div>
+                                    <div class="title-en">Medical Cart S Series</div>
+                                    <div class="isnew">全新上市</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- /#wrapper -->
+    <% include layout/views_js.ejs %>
+        <script type="text/javascript">
+        $(function() {
+
+            var h = $(window).height();
+            $("#solutionList").height(h - 50);
+
+        });
+        </script>
+</body>
+
+</html>

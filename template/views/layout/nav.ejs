@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="nav-wrap">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="/images/h_logo.png">
+                    </a>
+                </div>
+                <div class="tools">
+                    <div class="search"></div>
+                    <div class="earth"></div>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="<% if (page === 'index') { %>active<% }  %>"><a href="./">首页</a></li>
+                        <li class="<% if (page === 'solution') { %>active<% }  %>"><a href="/solution">产品及解决方案</a></li>
+                        <li class="<% if (page === 'case') { %>active<% }  %>"><a href="/case">成功案例</a></li>
+                        <li class="<% if (page === 'trends') { %>active<% }  %>"><a href="/trends">行业动态</a></li>
+                        <li class="<% if (page === 'about') { %>active<% }  %>"><a href="/about">关于诺博</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

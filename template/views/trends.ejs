@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <% include layout/views_header.ejs %>
+    <style type="text/css">
+    .wrap {
+        visibility: visible;
+    }
+    /* 行业动态样式 */
+    
+    .trends-list {
+        margin-top: 70px;
+    }
+    
+    .trends-item {
+        margin-top: 20px;
+        box-shadow: 0 0 2px #ccc;
+    }
+    
+    .trends-item:first-child {
+        margin-top: 0;
+    }
+    
+    .trends-item .img {
+        
+        overflow: hidden;
+    }
+    
+    .trends-item img {
+        width: 100%;
+    }
+    
+    .trends-item .text {
+        padding: 15px;
+        background-color: #fff;
+    }
+    
+    .trends-item .text p {
+        line-height: 25px;
+        margin-bottom: 0;
+        color: #666;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <% include layout/nav.ejs %>
+        <!-- 动态列表 -->
+        <div class="row">
+            <div class="trends-list">
+                <div class="container">
+                    <div class="trends-item">
+                        <div class="img">
+                            <img src="images/carousel_02.jpg">
+                        </div>
+                        <div class="text">
+                            <p>欢迎莅临2016CHINC 中华医院信息网络大会</p>
+                            <p>5月27日-29日 广东·珠海国际会展中心 / NuboMed诺博医疗展位 T431</p>
+                        </div>
+                    </div>
+                    <div class="trends-item">
+                        <div class="img">
+                            <img src="images/carousel_03.jpg">
+                        </div>
+                        <div class="text">
+                            <p>诺博站台全新亮相2016CHINC 中华医院信息网络大会</p>
+                            <p>将发布两款全新上市产品:移动工作站S系列及智能药物管理，敬请期待。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 动态列表结束 -->
+        <% include layout/views_footer.ejs %>
+    </div>
+    <!-- /#wrapper -->
+    <% include layout/views_js.ejs %>
+    </script>
+</body>
+
+</html>

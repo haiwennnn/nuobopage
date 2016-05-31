@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>诺博</title>
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/views/swiper.min.css" rel="stylesheet">
+    <link href="/css/views/index.css" rel="stylesheet">
+    <style type="text/css">
+    html,
+    body,
+    .wrap {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+        color: #666;
+    }
+    
+    .swiper-slide {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        background-position: center center;
+        background-size: cover;
+        text-align: center;
+        background-color: #fff;
+    }
+    
+    .swiper-slide .content {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+    
+    .swiper-slide .content .text,
+    .swiper-slide .content .small-text {
+        line-height: 20px;
+    }
+    
+    .swiper-slide:nth-child(1) {
+        font-size: 3.4em;
+        color: #fff;
+        text-shadow: 0 1px 1px #333;
+    }
+    
+    .swiper-slide:nth-child(1) .content {
+        top: 50%;
+        height: 40px;
+        margin-top: -20px;
+        text-align: center;
+    }
+    
+    .swiper-slide:nth-child(2) {}
+    
+    .swiper-slide:nth-child(2) .content {
+        top: 25%;
+        left: 25px;
+        width: 220px;
+        text-align: left;
+    }
+    
+    .swiper-slide:nth-child(2) .title {
+        font-size: 1.3em;
+        line-height: 50px;
+    }
+    
+    .swiper-slide:nth-child(2) .text {
+        display: none;
+    }
+    
+    .swiper-slide:nth-child(3) {}
+    
+    .swiper-slide:nth-child(3) .content {
+        top: 80px;
+        left: inherit;
+        right: 25px;
+    }
+    
+    .swiper-slide:nth-child(3) .title {
+        font-size: 1.3em;
+        text-align: right;
+    }
+    
+    .swiper-slide:nth-child(3) .text {
+        display: none;
+    }
+    
+    .swiper-slide:nth-child(4) {}
+    
+    .swiper-slide:nth-child(4) .content {
+        top: 140px;
+        left: 20px;
+        width: 245px;
+        text-align: left;
+        color: #fff;
+    }
+    
+    .swiper-slide:nth-child(4) .title {
+        font-size: 1.5em;
+        line-height: 50px;
+    }
+    
+    .swiper-slide:nth-child(4) .text {}
+    
+    .swiper-slide:nth-child(5) {
+        background-position-x: 53%;
+    }
+    
+    .swiper-slide:nth-child(5) .content {
+        top: initial;
+        left: initial;
+        right: 15px;
+        bottom: 30px;
+        width: 180px;
+        text-align: left;
+    }
+    
+    .swiper-slide:nth-child(5) .title {
+        display: none;
+    }
+    
+    .swiper-slide:nth-child(5) .text {
+        font-size: 1.2em;
+        line-height: 18px;
+    }
+    /* iPhone 6 plus */
+    
+    @media(min-width: 410px) {
+        .swiper-slide:nth-child(2) {}
+        .swiper-slide:nth-child(2) .content {
+            top: 20%;
+            left: 25px;
+            width: 260px;
+            text-align: left;
+        }
+        .swiper-slide:nth-child(2) .title {
+            font-size: 1.6em;
+            line-height: 50px;
+        }
+        .swiper-slide:nth-child(2) .small-text {
+            display: none;
+        }
+        .swiper-slide:nth-child(2) .text {
+            display: block;
+        }
+        .swiper-slide:nth-child(3) .content {
+            top: 95px;
+            left: inherit;
+            right: 30px;
+        }
+        .swiper-slide:nth-child(4) .content {
+            top: 180px;
+            left: 20px;
+            width: 280px;
+            text-align: left;
+            color: #fff;
+        }
+        .swiper-slide:nth-child(4) .text {
+            font-size: 1.1em;
+        }
+        .swiper-slide:nth-child(5) .content {
+            top: initial;
+            left: initial;
+            right: 30px;
+            bottom: 45px;
+            width: 210px;
+            text-align: left;
+        }
+        .swiper-slide:nth-child(5) .text {
+            font-size: 1.2em;
+            line-height: 24px;
+        }
+    }
+    /* ipad */
+    
+    @media(min-width: 767px) {
+        .swiper-slide:nth-child(1) {
+            font-size: 6.5em;
+        }
+        .swiper-slide:nth-child(2) .content {
+            top: 21%;
+            width: 500px;
+        }
+        .swiper-slide:nth-child(2) .title {
+            font-size: 2.2em;
+            line-height: 65px;
+        }
+        .swiper-slide:nth-child(2) .text {
+            display: block;
+            font-size: 1.1em;
+            line-height: 22px;
+        }
+        .swiper-slide:nth-child(3) .content {
+            top: 50%;
+            left: inherit;
+            right: 30px;
+            width: 260px;
+            margin-top: -100px;
+        }
+        .swiper-slide:nth-child(3) .title {
+            font-size: 1.6em;
+            line-height: 1.6em;
+            text-align: left;
+        }
+        .swiper-slide:nth-child(3) .text {
+            display: block;
+            line-height: 22px;
+            margin-top: 15px;
+            text-align: left;
+        }
+        .swiper-slide:nth-child(4) .content {
+            top: 50%;
+            left: 11%;
+            width: 500px;
+            margin-top: -110px;
+            text-align: left;
+            color: #fff;
+        }
+        .swiper-slide:nth-child(4) .title {
+            font-size: 2.4em;
+            line-height: 50px;
+        }
+        .swiper-slide:nth-child(4) .text {
+            font-size: 1.1em;
+            line-height: 24px;
+            margin-top: 10px;
+        }
+        .swiper-slide:nth-child(5) {
+            background-position-x: 59%;
+        }
+        .swiper-slide:nth-child(5) .content {
+            top: 50%;
+            left: initial;
+            right: 6%;
+            bottom: inherit;
+            width: 335px;
+            margin-top: -55px;
+        }
+        .swiper-slide:nth-child(5) .text {
+            font-size: 1.1em;
+            line-height: 22px;
+            margin-top: 15px;
+        }
+        .swiper-slide:nth-child(5) .title {
+            display: block;
+            font-size: 1.8em;
+        }
+    }
+    
+    @media(min-width: 1023px) {
+        .swiper-slide:nth-child(3) .content {
+            right: 12%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 导航开始 -->
+        <div class="row">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img alt="Brand" src="/images/h_logo.png">
+                        </a>
+                    </div>
+                    <div class="tools">
+                        <div class="search"></div>
+                        <div class="earth"></div>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">首页</a></li>
+                            <li><a href="#about">产品及解决方案</a></li>
+                            <li><a href="#about">成功案例</a></li>
+                            <li><a href="#about">行业动态</a></li>
+                            <li><a href="#contact">关于诺博</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- 导航结束 -->
+        <!-- swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_01.jpg);">
+                    <div class="content">
+                        <div class="title">New Series S</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_02.jpg);">
+                    <div class="content">
+                        <div class="title">诺博 · 全新S系列移动工作站
+                        </div>
+                        <div class="small-text">
+                            诺博移动工作站全新s系列秉承诺博clean、simple、smart的设计理念，专为医护人员移动工作设计，让医护人员可以专注于真正重要的事情 – 照顾好病人。
+                        </div>
+                        <div class="text">诺博移动工作站全新s系列秉承诺博clean、simple、smart的设计理念，专为医护人员移动工作设计，让医护人员可以专注于真正重要的事情 – 照顾好病人。S series高度整合了高集成计算机、无线通信、智能电源管理、移动管理技术，适合多种临床工作环境：无论是门诊、急诊、手术室还是ICU和病区，帮助临床医护工作者实现移动查房、移动护理、移动监护、床旁检测等工作。</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_03.jpg);">
+                    <div class="content">
+                        <div class="title">
+                            一体化台面
+                            <br> 人体工学与临床应用完美结合
+                        </div>
+                        <div class="text">台面包含主机最厚处不到100mm，更显灵动简洁 认证的医疗专用抑菌材料，耐受医疗消毒剂，防止交叉感染 专利功能设计使台面可用面积最大化 增加可扩展台面，放置更多常用器械 台面键盘同平面，更适合医护人员操作键盘 360°环绕把手，各角度轻松掌握
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_04.jpg);">
+                    <div class="content">
+                        <div class="title">
+                            更轻便 · 更小巧 · 更易推
+                        </div>
+                        <div class="text">精巧底座，适合各种狭窄走道，便于直接推入床旁
+                            <br>自动/手动升降，保障医护人员操作舒适
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_05.jpg);">
+                    <div class="content">
+                        <div class="title">
+                            技术创新 · 保障医疗应用及质量
+                        </div>
+                        <div class="text">创新的24小时不间断电源方案，保障临床应用 专利电源管理系统，有效提升电池质量及寿命 快速充电技术，增加临床使用时间
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_06.jpg);">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- swiper结束 -->
+        <!-- 底部 -->
+        <div class="row">
+            <div class="footer">
+                <div class="container">
+                    <div class="col-sm-8 clearfix">
+                        <div class="f_logo">
+                            <img src="/images/f_logo.png">
+                        </div>
+                        <div class="contact">
+                            <p>Tel: 755-33079022</p>
+                            <p>Add: 深圳宝安区石岩创维科技大厦A901</p>
+                            <p>Copyright 2012-2016 by Nubomed 粤ICP备 10016521 号</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 clearfix">
+                        <div class="qrcode">
+                            <img src="/images/qr.png">
+                            <p>扫一扫，关注诺博医疗</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部结束 -->
+    </div>
+    <!-- /#wrapper -->
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/swiper.jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            direction: 'vertical',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            mousewheelControl: true
+        });
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+body {
+    font-family: "Microsoft YaHei",sans-serif,Arial;
+    font-weight: lighter;
+}
+
+.wrap {
+    position: relative;
+    background-color: #eaeaea;
+}
+
+
+/* 覆盖bootstrap样式 */
+
+.row {
+    margin: 0;
+}
+
+.navbar-brand img{
+    width: 200px;
+}
+
+
+/* 修改bootstrap导航样式 */
+
+.navbar-default {
+    overflow: hidden;
+}
+
+.navbar-default:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 266px;
+    background-color: #484848;
+    opacity: 0.5;
+    z-index: 90;
+}
+
+.nav-wrap {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 99;
+}
+
+
+/* 修改bootstrap导航样式结束 */
+
+
+/* 导航条右侧小按钮 */
+
+.tools {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    width: 100px;
+    height: 50px;
+}
+
+.tools > div {
+    float: left;
+    width: 50px;
+    height: 100%;
+    background-size: 18px 18px;
+}
+
+.search {
+    background: url("/images/search.png") center center no-repeat;
+}
+
+.earth {
+    background: url("/images/earth.png") center center no-repeat;
+}
+
+@media (min-width: 834px) {
+    .tools {
+        position: relative;
+        top: inherit;
+        right: inherit;
+        float: right;
+    }
+}
+
+
+/* 首页底部 */
+
+.footer {
+    /*max-width: 1200px;
+    
+    margin: 0 auto;*/
+    min-height: 145px;
+    margin-top: 20px;
+    color: #666;
+    font-size: 12px;
+    background-color: #f1f2f3;
+}
+
+.f_logo,
+.contact,
+.qrcode {
+    float: left;
+    height: 70px;
+    margin-top: 40px;
+}
+
+.f_logo {
+    width: 170px;
+}
+
+.contact {
+    height: 60px;
+    line-height: 20px;
+    margin-top: 45px;
+    margin-left: 40px;
+    padding-left: 40px;
+    border-left: 1px solid #ccc;
+}
+
+.contact p {
+    margin: 0 0;
+}
+
+.footer .qrcode {
+    float: right;
+    width: 150px;
+    height: 110px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.footer .qrcode p {
+    margin-top: 8px;
+}
+
+@media (max-width:991px) {
+    .contact {
+        display: none;
+    }
+}
+
+@media (max-width:880px) {
+    .contact {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width:834px) {
+    .contact {
+        display: block;
+    }
+}
+
+@media (max-width:526px) {
+    .f_logo {
+        float: none !important;
+        margin: 40px auto 0 !important;
+    }
+    .contact {
+        float: none !important;
+        margin: 30px auto 0 !important;
+        text-align: center;
+        border-left: none;
+    }
+    .footer .qrcode {
+        display: block;
+        float: none;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width:425px) {
+    .navbar-brand {
+        width: 140px;
+        overflow: hidden;
+    }
+    .product-item {
+        background-position: 150% center;
+    }
+    .item-two {
+        background-position: 95% center !important;
+    }
+}
+/* footer end */

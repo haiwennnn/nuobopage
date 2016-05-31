@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <% include layout/views_header.ejs %>
+    <link href="/css/views/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+        <% include layout/nav.ejs %>
+        <!-- 焦点图 -->
+        <div class="row">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(/images/index/carousel_01.jpg)">
+                        <div class="content">
+                            <div class="title title-en">Medical Cart C/N Series</div>
+                            <div class="title title-cn">移动工作站C/N系列</div>
+                            <div class="readmore">了解更多 >></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(/images/index/carousel_02.jpg)">
+                        <div class="content">
+                            <div class="title title-en">Medical Cart New Series S</div>
+                            <div class="title title-cn">全新S系列移动工作站</div>
+                            <div class="readmore">了解更多 >></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(/images/index/carousel_03.jpg)">
+                        <div class="content">
+                            <div class="title title-en">Medication and Material Management System</div>
+                            <div class="title title-cn">智能药物及耗材管理系统</div>
+                            <div class="readmore">了解更多 >></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+            </div>
+        </div>
+        <!-- 焦点图结束 -->
+        <!-- 产品 -->
+        <div class="row">
+            <div class="product">
+                <div class="col-sm-4">
+                    <div class="product-item item-one">
+                        <div class="title isnew">移动工作站S系列</div>
+                        <div class="more"><a href="">LEARN MORE &nbsp;&nbsp;>>></a></div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="padding:0;">
+                    <div class="product-item item-two">
+                        <div class="title">成功案例</div>
+                        <div class="more"><a href="">LEARN MORE &nbsp;&nbsp;>>></a></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-item item-three">
+                        <div class="title isnew">智能药物管理</div>
+                        <div class="more"><a href="">LEARN MORE &nbsp;&nbsp;>>></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 产品结束 -->
+        <!-- 底部 -->
+        <!-- 底部 -->
+        <% include layout/views_footer.ejs %>
+    </div>
+    <!-- /#wrapper -->
+    <% include layout/views_js.ejs %>
+    <script src="/js/swiper.jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        //计算swiper高度
+        var productItemWidth = $(".product > div:eq(0)").width();
+
+        $(".product .product-item").height(productItemWidth / 1.7);
+
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 3000, //可选选项，自动滑动
+            pagination: '.swiper-pagination',
+            paginationClickable: '.swiper-pagination',
+
+        });
+        $(".wrap").css("visibility", "visible");
+    });
+    </script>
+</body>
+
+</html>
