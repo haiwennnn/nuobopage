@@ -3,321 +3,362 @@
 
 <head>
     <% include layout/views_header.ejs %>
-    <style type="text/css">
-    html,
-    body,
-    .wrap {
-        height: 100%;
-        width: 100%;
-    }
-    
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 12px;
-        color: #666;
-    }
-    
-    .swiper-slide {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        background-position: center center;
-        background-size: cover;
-        text-align: center;
-        background-color: #fff;
-    }
-    
-    .swiper-slide .inner-image {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .swiper-slide .inner-image > div {
-        position: absolute;
-        background-position: center center;
-        background-size: cover;
-    }
-    
-    .swiper-slide:nth-child(4) .inner-image-1 {
-        left: 0;
-        top: 0;
-        width: 50%;
-        height: 50%;
-    }
-    
-    .swiper-slide:nth-child(4) .inner-image-2 {
-        left: 0;
-        top: 50%;
-        width: 50%;
-        height: 50%;
-    }
-    
-    .swiper-slide:nth-child(4) .inner-image-3 {
-        left: 50%;
-        top: 0;
-        width: 50%;
-        height: 100%;
-    }
-    
-    .swiper-slide:nth-child(5) .inner-image-1 {
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 50%;
-    }
-    
-    .swiper-slide:nth-child(5) .inner-image-2 {
-        left: 0;
-        top: 50%;
-        width: 100%;
-        height: 50%;
-    }
-    
-    .swiper-slide .content {
-        position: absolute;
-        font-size: 12px;
-        text-align: left;
-        color: #fff;
-    }
-    
-    .swiper-slide .content .title {
-        font-weight: 300;
-    }
-    
-    .swiper-slide .content .text {
-        line-height: 22px;
-    }
-    
-    .footer {
-        margin-top: 0;
-    }
-    
-    .swiper-slide:nth-child(1) .content {
-        left: 15%;
-        top: 50%;
-        margin-top: -81px;
-    }
-    
-    .swiper-slide:nth-child(1) .content .title {
-        font-size: 38px;
-        text-align: right;
-        font-weight: lighter;
-    }
-    
-    .swiper-slide:nth-child(1) .content .text {}
-    
-    .swiper-slide:nth-child(2) .content {
-        left: 10%;
-        top: 40%;
-        margin-top: -81px;
-        color: #666;
-    }
-    
-    .swiper-slide:nth-child(2) .content .title {
-        font-size: 22px;
-    }
-    
-    .swiper-slide:nth-child(2) .content .text {}
-    
-    .swiper-slide:nth-child(3) .content {
-        left: 50%;
-        top: 40%;
-        margin-top: -81px;
-        color: #666;
-    }
-    
-    .swiper-slide:nth-child(3) .content .title {
-        font-size: 22px;
-    }
-    
-    .swiper-slide:nth-child(3) .content .text {}
-    
-    .swiper-slide:nth-child(4) .content {
-        left: 52%;
-        top: 50%;
-        margin-top: -58px;
-        color: #fff;
-    }
-    
-    .swiper-slide:nth-child(4) .content .title {
-        font-size: 22px;
-        line-height: 50px;
-        font-weight: lighter;
-    }
-    
-    .swiper-slide:nth-child(4) .content .text {
-        line-height: 22px;
-    }
-    
-    .swiper-slide:nth-child(4) .inner-image-1 .content {}
-    
-    .swiper-slide:nth-child(4) .inner-image-2 .content {}
-    
-    .swiper-slide:nth-child(4) .inner-image-3 .content {
-        left: 5%;
-        margin-top: -91px;
-    }
-    </style>
+        <style type="text/css">
+        html,
+        body,
+        .wrap {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .swiper-slide {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            background-color: #fff;
+        }
+        
+        .swiper-slide .inner-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide .inner-image > div {
+            position: absolute;
+            background-position: center center;
+            background-size: cover;
+        }
+        
+        .swiper-slide:nth-child(4) .inner-image-1 {
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 50%;
+        }
+        
+        .swiper-slide:nth-child(4) .inner-image-2 {
+            left: 0;
+            top: 50%;
+            width: 50%;
+            height: 50%;
+        }
+        
+        .swiper-slide:nth-child(4) .inner-image-3 {
+            left: 50%;
+            top: 0;
+            width: 50%;
+            height: 100%;
+        }
+        
+        .swiper-slide:nth-child(5) .inner-image-1 {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 50%;
+        }
+        
+        .swiper-slide:nth-child(5) .inner-image-2 {
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 50%;
+        }
+        
+        .swiper-slide .content {
+            position: absolute;
+            text-align: left;
+            color: #fff;
+        }
+        
+        .swiper-slide .content .title {
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 45px;
+        }
+        
+        .swiper-slide .content .text {
+            font-size: 14px;
+            line-height: 26px;
+        }
+        
+        .footer {
+            margin-top: 0;
+        }
+        
+        .swiper-slide:nth-child(1) .content {
+            left: 15%;
+            top: 50%;
+            margin-top: -90px;
+        }
+        
+        .swiper-slide:nth-child(1) .content .title {
+            line-height: 60px;
+            font-size: 38px;
+            text-align: right;
+            font-weight: lighter;
+        }
+        
+        .swiper-slide:nth-child(1) .content .text {}
+        
+        .swiper-slide:nth-child(2) .content {
+            left: 12%;
+            top: 40%;
+            margin-top: -81px;
+            color: #666;
+        }
+        
+        .swiper-slide:nth-child(2) .content .title {}
+        
+        .swiper-slide:nth-child(2) .content .text {}
+        
+        .swiper-slide:nth-child(3) .content {
+            left: 50%;
+            top: 50%;
+            width: 45%;
+            margin-top: -204px;
+            color: #666;
+        }
+        
+        .swiper-slide:nth-child(3) .content .title {}
+        
+        .swiper-slide:nth-child(3) .content .text {}
+        
+        .swiper-slide:nth-child(4) .content {
+            left: 52%;
+            top: 50%;
+            margin-top: -58px;
+            color: #fff;
+        }
+        
+        .swiper-slide:nth-child(4) .content .title {
+            line-height: 55px;
+            font-weight: lighter;
+        }
+        
+        .swiper-slide:nth-child(4) .content .text {}
+        
+        .swiper-slide:nth-child(4) .inner-image-1 .content {}
+        
+        .swiper-slide:nth-child(4) .inner-image-2 .content {}
+        
+        .swiper-slide:nth-child(4) .inner-image-3 .content {
+            left: 5%;
+            margin-top: -91px;
+        }
+        
+        @media(max-width: 1605px) {
+            .swiper-slide .content .title {
+                font-size: 26px;
+            }
+            .swiper-slide .content .text {
+                font-size: 13px;
+                line-height: 26px;
+            }
+        }
+        
+        @media(max-width: 1445px) {
+            .swiper-slide .content .title {
+                font-size: 24px;
+            }
+            .swiper-slide .content .text {
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+        
+        @media(max-width: 1030px) {
+            .swiper-slide .content .title {
+                font-size: 20px;
+            }
+            .swiper-slide .content .text {
+                line-height: 20px;
+            }
+            .swiper-slide:nth-child(1) .content {
+                left: 18%;
+                margin-top: -68px;
+            }
+            .swiper-slide:nth-child(1) .content .title {
+                line-height: 45px;
+                font-size: 24px;
+            }
+            .swiper-slide:nth-child(2) .content {
+                top: 43%;
+            }
+            .swiper-slide:nth-child(3) .content{
+                top: 54%;
+                margin-top: -184px;
+            }
+        }
+        </style>
 </head>
 
 <body>
     <div class="wrap">
         <% include layout/nav.ejs %>
-        <!-- swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url(/images/case_detail/chest/chest_01.jpg);">
-                    <div class="content">
-                        <div class="title">
-                            NuboMed
-                            <br>Medication
-                            <br>Management
-                        </div>
-                        <div class="small-text">
-                        </div>
-                        <div class="text"></div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url(/images/case_detail/chest/chest_02.jpg);">
-                    <div class="content">
-                        <div class="title">诺博智能药物及耗材管理系统</div>
-                        <div class="small-text">
-                        </div>
-                        <div class="text">
-                            <br> 诺博智能药物及耗材管理系统为医院提供完善安全的软硬一体药物
-                            <br>及耗材管理方案，可应用在手术室、病房、急诊及ICU等场景，全
-                            <br>闭环保障患者正确用药，全流程追溯耗材使用情况，保障医疗质量，
-                            <br>提高临床医护工作效率，提升医院精细化管理水平，减少医院药物
-                            <br>耗材管理成本。
-                            <br>
-                            <br> ■ 毒麻药物管理柜
-                            <br> ■ 智能药物耗材柜（M系列）
-                            <br> ■ 智能药物耗材柜（S系列）
-                            <br> ■ 智能药物及耗材管理平台
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url(/images/case_detail/chest/chest_03.jpg);">
-                    <div class="content">
-                        <div class="title">诺博智能药物及耗材管理系统</div>
-                        <div class="small-text">
-                        </div>
-                        <div class="text">
-                            <br> ■ 安全
-                            <br> 对接电子医嘱，减少医嘱转抄，智能提示取药，确保取药正确； 核对安全剂量及有效期，确保患者正确使用药物及耗材，减少人工差错。
-                            <br>
-                            <br> ■ 效率
-                            <br> 核对、取药、复核、签名一次完成，提升临床医护人员工作效率； 入库、出库、退库、盘点、补充、核对信息自动同步，提升药事耗材管理人员工作效率。
-                            <br>
-                            <br> ■ 管理
-                            <br> 医嘱核对、取药/耗材复核流程电子及条码核对，全流程信息可追溯，助力病区护理精细化管理；
-                            <br> 实时病区药品库存信息统计，及时通知药房补药，自动筛查过期药物，助力医院药事耗材精细化管理；
-                            <br> 毒麻药品、高危药品系统锁控，智能识别剂量，及时预警，助力手术室贵危药品精细化管理；
-                            <br> 省去耗材二级库房管理，耗材信息全院内及院外同步，助力医院耗材物资供应链精细化管理。
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner-image">
-                        <div class="inner-image-1" style="background-image: url(/images/case_detail/chest/chest_04_01.jpg);">
-                            <div class="content">
-                                <div class="title">诺博移动工作站</div>
-                                <div class="small-text">
-                                </div>
-                                <div class="text">与诺博移动工作站配套使用，将智能
-                                    <br>药物管理延伸到患者床旁，完成最后
-                                    <br>十米的药物管理
-                                </div>
+            <!-- swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(/images/case_detail/chest/chest_01.jpg);">
+                        <div class="content">
+                            <div class="title">
+                                NuboMed
+                                <br>Medication
+                                <br>Management
                             </div>
-                        </div>
-                        <div class="inner-image-2" style="background-image: url(/images/case_detail/chest/chest_04_02.jpg);">
-                            <div class="content">
-                                <div class="title">诺博毒麻药物管理柜
-                                </div>
-                                <div class="text">
-                                    毒麻药物管理柜适用于手术室ICU等科
-                                    <br>室的麻醉药品、精神药品、高危药品的
-                                    <br>严格管理
-                                </div>
+                            <div class="small-text">
                             </div>
+                            <div class="text"></div>
                         </div>
-                        <div class="inner-image-3" style="background-image: url(/images/case_detail/chest/chest_04_03.jpg);">
-                            <div class="content">
-                                <div class="title">诺博智能药物耗材柜
-                                </div>
-                                <div class="text">
-                                    适用多种医院应用场景，实现病区/手术室
-                                    <br> /ICU/急诊的药物及耗材智能管控定制化产
-                                    <br> 品，可独立或组合使用无缝对接医院信息
-                                    <br> 系统，同步电子医嘱支持条码打印扫描，
-                                    <br> RFID读取登录，指纹登录等功能智能识别
-                                    <br> 技术及锁控技术帮助实现药物耗材5级管控
-                                </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(/images/case_detail/chest/chest_02.jpg);">
+                        <div class="content">
+                            <div class="title">诺博智能药物及耗材管理系统</div>
+                            <div class="small-text">
+                            </div>
+                            <div class="text">
+                                <br> 诺博智能药物及耗材管理系统为医院提供完善安全的软硬一体药物
+                                <br>及耗材管理方案，可应用在手术室、病房、急诊及ICU等场景，全
+                                <br>闭环保障患者正确用药，全流程追溯耗材使用情况，保障医疗质量，
+                                <br>提高临床医护工作效率，提升医院精细化管理水平，减少医院药物
+                                <br>耗材管理成本。
+                                <br>
+                                <br> ■ 毒麻药物管理柜
+                                <br> ■ 智能药物耗材柜（M系列）
+                                <br> ■ 智能药物耗材柜（S系列）
+                                <br> ■ 智能药物及耗材管理平台
+                                <br>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner-image">
-                        <div class="inner-image-1" style="background-image: url(/images/case_detail/chest/chest_05_01.jpg);"></div>
-                        <div class="inner-image-2" style="background-image: url(/images/case_detail/chest/chest_05_02.jpg);"></div>
-                    </div>
-                    <div class="content">
-                        <div class="title">
+                    <div class="swiper-slide" style="background-image: url(/images/case_detail/chest/chest_03.jpg);">
+                        <div class="content">
+                            <div class="title">诺博智能药物及耗材管理系统</div>
+                            <div class="small-text">
+                            </div>
+                            <div class="text">
+                                <br> ■ 安全
+                                <br> 对接电子医嘱，减少医嘱转抄，智能提示取药，确保取药正确； 核对安全剂量及有效期，确保患者正确使用药物及耗材，减少人工差错。
+                                <br>
+                                <br> ■ 效率
+                                <br> 核对、取药、复核、签名一次完成，提升临床医护人员工作效率； 入库、出库、退库、盘点、补充、核对信息自动同步，提升药事耗材管理人员工作效率。
+                                <br>
+                                <br> ■ 管理
+                                <br> 医嘱核对、取药/耗材复核流程电子及条码核对，全流程信息可追溯，助力病区护理精细化管理；
+                                <br> 实时病区药品库存信息统计，及时通知药房补药，自动筛查过期药物，助力医院药事耗材精细化管理；
+                                <br> 毒麻药品、高危药品系统锁控，智能识别剂量，及时预警，助力手术室贵危药品精细化管理；
+                                <br> 省去耗材二级库房管理，耗材信息全院内及院外同步，助力医院耗材物资供应链精细化管理。
+                            </div>
                         </div>
-                        <div class="small-text">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="inner-image">
+                            <div class="inner-image-1" style="background-image: url(/images/case_detail/chest/chest_04_01.jpg);">
+                                <div class="content">
+                                    <div class="title">诺博移动工作站</div>
+                                    <div class="small-text">
+                                    </div>
+                                    <div class="text">与诺博移动工作站配套使用，将智能
+                                        <br>药物管理延伸到患者床旁，完成最后
+                                        <br>十米的药物管理
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-image-2" style="background-image: url(/images/case_detail/chest/chest_04_02.jpg);">
+                                <div class="content">
+                                    <div class="title">诺博毒麻药物管理柜
+                                    </div>
+                                    <div class="text">
+                                        毒麻药物管理柜适用于手术室ICU等科
+                                        <br>室的麻醉药品、精神药品、高危药品的
+                                        <br>严格管理
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-image-3" style="background-image: url(/images/case_detail/chest/chest_04_03.jpg);">
+                                <div class="content">
+                                    <div class="title">诺博智能药物耗材柜
+                                    </div>
+                                    <div class="text">
+                                        适用多种医院应用场景，实现病区/手术室
+                                        <br> /ICU/急诊的药物及耗材智能管控定制化产
+                                        <br> 品，可独立或组合使用无缝对接医院信息
+                                        <br> 系统，同步电子医嘱支持条码打印扫描，
+                                        <br> RFID读取登录，指纹登录等功能智能识别
+                                        <br> 技术及锁控技术帮助实现药物耗材5级管控
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="inner-image">
+                            <div class="inner-image-1" style="background-image: url(/images/case_detail/chest/chest_05_01.jpg);"></div>
+                            <div class="inner-image-2" style="background-image: url(/images/case_detail/chest/chest_05_02.jpg);"></div>
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                            </div>
+                            <div class="small-text">
+                            </div>
+                            <div class="text"></div>
+                        </div>
                     </div>
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-        <!-- swiper结束 -->
-        <% include layout/views_footer.ejs %>
+            <!-- swiper结束 -->
+            <% include layout/views_footer.ejs %>
     </div>
     <!-- /#wrapper -->
     <% include layout/views_js.ejs %>
-    <script src="/js/swiper.jquery.min.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            direction: 'vertical',
-            slidesPerView: 1,
-            paginationClickable: true,
-            spaceBetween: 30,
-            mousewheelControl: true,
-            onSlideChangeEnd: function(swiper) {
-                if (swiper.isEnd) {
-                    swiper.disableMousewheelControl();
-                    $(window).scrollTop(1);
+        <script src="/js/swiper.jquery.min.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                direction: 'vertical',
+                slidesPerView: 1,
+                paginationClickable: true,
+                spaceBetween: 30,
+                mousewheelControl: true,
+                onSlideChangeEnd: function(swiper) {
+                    if (swiper.isEnd) {
+                        swiper.disableMousewheelControl();
+                        $(window).scrollTop(1);
+                    }
                 }
-            }
+            });
+            $(".wrap").css("visibility", "visible");
+            $(window).scroll(function() {
+                if ($(this).scrollTop() <= 0) {
+                    swiper.enableMousewheelControl();
+                }
+            });
         });
-        $(".wrap").css("visibility", "visible");
-        $(window).scroll(function() {
-            if ($(this).scrollTop() <= 0) {
-                swiper.enableMousewheelControl();
-            }
-        });
-    });
-    </script>
+        </script>
 </body>
 
 </html>

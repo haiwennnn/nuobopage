@@ -1,5 +1,5 @@
 body {
-    font-family: "Microsoft YaHei",sans-serif,Arial;
+    font-family: "Microsoft YaHei", sans-serif, Arial;
     font-weight: lighter;
 }
 
@@ -15,7 +15,7 @@ body {
     margin: 0;
 }
 
-.navbar-brand img{
+.navbar-brand img {
     width: 200px;
 }
 
@@ -85,10 +85,71 @@ body {
 
 /* 首页底部 */
 
-.footer {
-    /*max-width: 1200px;
-    
-    margin: 0 auto;*/
+footer {
+    color: #666;
+    font-size: 12px;
+    background-color: #f1f2f3;
+}
+
+.footer_containter {
+    max-width: 1200px;
+    min-height: 145px;
+    margin: 0 auto;
+}
+
+.footer_item {
+    float: left;
+}
+
+.footer_logo {
+    margin-top: 38px;
+}
+
+.footer_contact {
+    height: 69px;
+    margin: 41px 0 0 40px;
+    padding-left: 40px;
+    border-left: 1px solid #ccc;
+    line-height: 23px;
+}
+
+.footer_contact p {
+    margin-bottom: 0;
+}
+
+.footer_qr {
+    float: right;
+    height: 105px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer_qr p {
+    margin: 10px 0 0;
+}
+
+@media(max-width: 610px) {
+    .footer_logo {
+        width: 100%;
+        text-align: center;
+    }
+    .footer_contact {
+        width: 100%;
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 0;
+        padding-left: 0;
+        border-left: none;
+    }
+    .footer_qr {
+        display: block !important;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/*.footer {
     min-height: 145px;
     margin-top: 20px;
     color: #666;
@@ -181,5 +242,7 @@ body {
     .item-two {
         background-position: 95% center !important;
     }
-}
+}*/
+
+
 /* footer end */

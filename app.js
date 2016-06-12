@@ -20,7 +20,7 @@ var Index = require('./routes/views/index');
 var Admin_index = require("./routes/admin/index");
 
 //连接一次，需要预先创建好数据库
-mongoose.connect('mongodb://119.29.235.112：27017/nuobo');
+mongoose.connect('mongodb://119.29.235.112:27017/nuobo');
 var db = mongoose.connection;
 var Schema = mongoose.Schema;
 db.on('error', console.error.bind(console, 'connection error:'));

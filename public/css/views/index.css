@@ -1,6 +1,8 @@
-.wrap{
-    visibility:hidden;
+.wrap {
+    visibility: hidden;
 }
+
+
 /* 轮播图 */
 
 .swiper-slide {
@@ -72,7 +74,9 @@
     background-color: #5b97c7;
 }
 
+
 /* 轮播图 pagination */
+
 .swiper-pagination > span {
     position: relative;
     width: 50px;
@@ -83,9 +87,10 @@
     font-size: 16px;
     background-color: #ccc;
 }
+
 .swiper-pagination .swiper-pagination-bullet-active {
-        background-color: #4087bf;
-    }
+    background-color: #4087bf;
+}
 
 
 /* 轮播图结束 */
@@ -220,9 +225,6 @@
 }
 
 
-
-
-
 /* case */
 
 .case-list {
@@ -317,7 +319,25 @@
     color: #fff;
 }
 
-@media(min-width: 768px) {
+@media(max-width: 1285px) {
+    .swiper-slide .content .title-cn{
+        font-size: 28px;
+    }
+    .product-item .title {
+        font-size: 15px;
+    }
+    .navbar-nav > li > a {
+        font-size: 12px;
+    }
+    .product-item .title.isnew:after{
+        top: 28px;
+    }
+    .product-item .more a{
+        font-size: 12px;
+    }
+}
+
+/*@media(min-width: 768px) {
     .case-inner {
         font-size: 16px;
     }
@@ -339,4 +359,4 @@
     .case-inner p.enname {
         font-size: 1.4em;
     }
-}
+}*/

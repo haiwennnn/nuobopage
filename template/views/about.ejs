@@ -3,80 +3,135 @@
 
 <head>
     <% include layout/views_header.ejs %>
-    <style type="text/css">
-    .wrap{
-        visibility: visible;
-    }
-    #about {
-        background-image: url(/images/about.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-    .content {
-        position: relative;
-        max-width: 1200px;
-        height: 100%;
-        margin: 0 auto;
-    }
-    
-    .inner-content {
-        position: absolute;
-        left: 0;
-        width: 500px;
-        padding: 30px;
-        color: #fff;
-        background: url(/images/baout-inner-bg.png);
-    }
-    
-    .title {
-        line-height: 26px;
-        margin: 10px 0 10px 0;
-        border-left: 3px solid #7cb4e8;
-        font-size: 26px;
-        text-indent: 20px;
-    }
-    
-    .text p {
-        text-indent: 20px;
-        font-size: 13px;
-        line-height: 24px;
-    }
-    
-    .footer {
-        margin-top: 0;
-    }
-    </style>
+        <style type="text/css">
+        #about {
+            background-image: url(/images/about.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .content {
+            position: relative;
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        
+        .inner-content {
+            position: absolute;
+            left: 0;
+            width: 60%;
+            padding: 30px;
+            color: #fff;
+            background: url(/images/baout-inner-bg.png);
+        }
+        
+        .title {
+            line-height: 35px;
+            margin: 10px 0 10px 0;
+            border-left: 3px solid #7cb4e8;
+            font-size: 27px;
+            text-indent: 20px;
+        }
+        
+        .text p {
+            text-indent: 20px;
+            font-size: 15px;
+            line-height: 30px;
+        }
+        
+        .footer {
+            margin-top: 0;
+        }
+        
+        @media(max-width: 1600px) {
+            .title {
+                font-size: 24px;
+            }
+            .text p {
+                font-size: 14px;
+            }
+        }
+        
+        @media(max-width: 1440px) {
+            .inner-content {
+                padding: 20px;
+            }
+            .title {
+                line-height: 25px;
+                font-size: 22px;
+            }
+            .text p {
+                font-size: 13px;
+            }
+        }
+        
+        @media(max-width: 1285px) {
+            .inner-content {
+                width: 50%;
+                padding: 20px;
+            }
+            .title {
+                line-height: 24px;
+                font-size: 18px;
+            }
+            .text p {
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+        @media(max-width: 1030px) {
+            .inner-content {
+                left: 5%;
+            }
+            .title {
+                line-height: 20px;
+                font-size: 16px;
+            }
+            .text p {
+                font-size: 12px;
+                line-height: 22px;
+            }
+        }
+        </style>
 </head>
 
 <body>
     <div class="wrap">
         <% include layout/nav.ejs %>
-        <div id="about" class="row">
-            <div class="content">
-                <div id="innerContent" class="inner-content">
-                    <div class="title">诺博介绍</div>
-                    <div class="text">
-                        <p>诺博是一家从事医疗信息技术终端设备的研发厂商及整体管理软件解决方案的提供商及服务商，在美国加州和中国深圳均设有研发机构。</p>
-                        <p>诺博研发设计用于医疗服务的移动医护工作站、移动终端管理系统及药品管理系统。要，诺博不仅提供标准的硬件设备，其并提供客制化软硬一体整体解决方案，以达到医疗信息解决方案最优化。</p>
-                        <p>基于无线架构的诺博移动工作站及将人体工程学研究、医院工作流程与医务专业人员完美的结合在了一起，提供了最优化的移动医疗产品</p>
-                        <p>我们知道医护人员每天都有很多病人需要照顾。这就是为什么我们努力研制无后顾之忧的产品，让医护人员可以专注于真正重要的事情 – 照顾好病人。</p>
-                        <p>我们的目标是为医护人员创造一个优越的工作环境。轻便，无菱角流线设计，和抗菌材料的应用 ， 等等诺博产品理念使得移动护理工作变得更容易。</p>
+            <div id="about" class="row">
+                <div class="content">
+                    <div id="innerContent" class="inner-content">
+                        <div class="title">诺博介绍</div>
+                        <div class="text">
+                            <p>诺博是一家从事医疗信息技术终端设备的研发厂商及整体管理软件解决方案的提供商及服务商，在美国加州和中国深圳均设有研发机构。</p>
+                            <p>诺博研发设计用于医疗服务的移动医护工作站、移动终端管理系统及药品管理系统。要，诺博不仅提供标准的硬件设备，其并提供客制化软硬一体整体解决方案，以达到医疗信息解决方案最优化。</p>
+                            <p>基于无线架构的诺博移动工作站及将人体工程学研究、医院工作流程与医务专业人员完美的结合在了一起，提供了最优化的移动医疗产品</p>
+                            <p>我们知道医护人员每天都有很多病人需要照顾。这就是为什么我们努力研制无后顾之忧的产品，让医护人员可以专注于真正重要的事情 – 照顾好病人。</p>
+                            <p>我们的目标是为医护人员创造一个优越的工作环境。轻便，无菱角流线设计，和抗菌材料的应用 ， 等等诺博产品理念使得移动护理工作变得更容易。</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <% include layout/views_footer.ejs %>
+            <% include layout/views_footer.ejs %>
     </div>
     <!-- /#wrapper -->
     <% include layout/views_js.ejs %>
-    <script type="text/javascript">
-    $(function() {
-        var h = $(window).height();
-        $("#about").height(h - 145);
-        $("#innerContent").height((h - 145) * 0.7).css("top", ((h - 145) * 0.15) + "px");
-    });
-    </script>
+        <script type="text/javascript">
+        $(function() {
+            var h = $(window).height(),
+                w = $(window).width();
+            if (w < 1030) {
+                h = h > 670 ? h : 670;
+                $("#about").height(h - 145);
+                $("#innerContent").height((h - 145) * 0.7).css("top", ((h - 145) * 0.15) + "px");
+            } else {
+                $("#about").height(h - 145);
+                $("#innerContent").height((h - 145) * 0.7).css("top", ((h - 145) * 0.15) + "px");
+            }
+
+        });
+        </script>
 </body>
 
 </html>

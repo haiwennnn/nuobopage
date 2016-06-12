@@ -4,12 +4,8 @@
 <head>
     <% include layout/views_header.ejs %>
         <style type="text/css">
-        .wrap {
-            visibility: visible;
-        }
-        
         .case-list {
-            width: 1200px;
+            max-width: 1200px;
             height: 260px;
             margin: 70px auto 0;
         }
@@ -25,7 +21,7 @@
         }
         
         .left {
-            width: 680px;
+            width: 56.66666%;
         }
         
         .left img {
@@ -34,7 +30,7 @@
         }
         
         .right {
-            width: 520px;
+            width: 43.33333%;
             line-height: 260px;
             background-color: #898989;
         }
@@ -55,6 +51,14 @@
         .right .text p.title {
             line-height: 26px;
             font-size: 22px;
+        }
+        @media(max-width: 1285px){
+            .right .text p.title{
+                font-size: 20px;
+            }
+            .right .text p{
+                font-size: 13px;
+            }
         }
         </style>
 </head>

@@ -3,353 +3,448 @@
 
 <head>
     <% include layout/views_header.ejs %>
-    <style type="text/css">
-    html,
-    body,
-    .wrap {
-        height: 100%;
-        width: 100%;
-    }
-    
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 12px;
-        color: #666;
-    }
-    
-    .swiper-slide {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        background-position: center center;
-        background-size: cover;
-        text-align: center;
-        background-color: #fff;
-    }
-    
-    .swiper-slide .content {
-        position: absolute;
-        font-size: 12px;
-        text-align: left;
-        color: #fff;
-    }
-    
-    .swiper-slide .content .title {
-        font-size: 22px;
-        font-weight: 300;
-    }
-    
-    .swiper-slide .content .text {
-        line-height: 22px;
-    }
-    
-    .footer {
-        margin-top: 0;
-    }
-    
-    .swiper-slide:nth-child(1) .content {
-        left: 50%;
-        top: 50%;
-        font-size: 65px;
-        margin-left: -190px;
-        text-shadow: 0 1px 1px #666;
-    }
-    
-    .swiper-slide:nth-child(1) .content .title {
-        font-size: 65px;
-    }
-    
-    .swiper-slide:nth-child(2) .content {
-        left: 6%;
-        top: 35%;
-        margin-top: -93px;
-        color: #666;
-    }
-    
-    .swiper-slide:nth-child(3) .content {
-        right: 10%;
-        top: 50%;
-        margin-top: -108px;
-        color: #666;
-    }
-    
-    .swiper-slide:nth-child(4) .content {
-        left: 15%;
-        top: 45%;
-        margin-top: -48px;
-    }
-    
-    .swiper-slide:nth-child(5) .content {
-        right: 10%;
-        top: 45%;
-        margin-top: -56px;
-        color: #666;
-    }
-    
-    .inner-swiper {
-        width: 80%;
-        height: 100%;
-        background-color: #ccc;
-    }
-    
-    #innerSwiperPagination {
-        bottom: inherit;
-        top: 0;
-    }
-    
-    #innerSwiperPagination > span {
-        position: relative;
-        width: 100px;
-        height: 2px;
-        margin: 0;
-        border-radius: inherit;
-        opacity: 1;
-        font-size: 16px;
-        background-color: inherit;
-    }
-    
-    #innerSwiperPagination > span:after {
-        content: "";
-        position: absolute;
-        top: 30px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #ccc;
-    }
-    
-    #innerSwiperContainer .swiper-slide {
-        height: 100%;
-        background-color: #f9f9f9;
-    }
-    
-    #innerSwiperContainer .swiper-pagination-bullet-active {
-        background-color: inherit;
-    }
-    
-    #innerSwiperContainer .swiper-pagination-bullet-active:after {
-        background-color: #4087bf;
-        height: 4px;
-        margin-top: -1px;
-    }
-    
-    .inner-content {
-        position: absolute;
-        left: 20%;
-        top: 45%;
-        margin-top: -70px;
-        text-align: left;
-    }
-    
-    .inner-title {
-        font-size: 22px;
-    }
-    
-    .inner-text {
-        line-height: 22px;
-    }
-    
-    .inner-image {
-        position: absolute;
-        right: 13%;
-        height: 100%;
-        width: 350px;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-    }
-    </style>
+        <style type="text/css">
+        html,
+        body,
+        .wrap {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .swiper-slide {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            background-color: #fff;
+        }
+        
+        .swiper-slide .content {
+            position: absolute;
+            font-size: 14px;
+            text-align: left;
+            color: #fff;
+        }
+        
+        .swiper-slide .content .title {
+            font-size: 32px;
+            font-weight: 300;
+        }
+        
+        .swiper-slide .content .text {
+            font-size: 14px;
+            line-height: 26px;
+        }
+        
+        .footer {
+            margin-top: 0;
+        }
+        
+        .swiper-slide:nth-child(1) .content {
+            left: 50%;
+            top: 50%;
+            font-size: 65px;
+            margin-left: -190px;
+            text-shadow: 0 1px 1px #666;
+        }
+        
+        .swiper-slide:nth-child(1) .content .title {
+            font-size: 65px;
+        }
+        
+        .swiper-slide:nth-child(2) .content {
+            left: 6%;
+            top: 35%;
+            margin-top: -110px;
+            color: #666;
+        }
+        
+        .swiper-slide:nth-child(3) .content {
+            right: 10%;
+            top: 50%;
+            margin-top: -128px;
+            color: #666;
+        }
+        
+        .swiper-slide:nth-child(4) .content {
+            left: 15%;
+            top: 45%;
+            margin-top: -48px;
+        }
+        
+        .swiper-slide:nth-child(5) .content {
+            right: 10%;
+            top: 45%;
+            margin-top: -56px;
+            color: #666;
+        }
+        
+        .inner-swiper {
+            width: 1200px;
+            height: 100%;
+            background-color: #ccc;
+        }
+        
+        #innerSwiperPagination {
+            bottom: inherit;
+            top: 0;
+        }
+        
+        #innerSwiperPagination > span {
+            position: relative;
+            width: 100px;
+            height: 2px;
+            margin: 0;
+            border-radius: inherit;
+            opacity: 1;
+            font-size: 16px;
+            background-color: inherit;
+        }
+        
+        #innerSwiperPagination > span:after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+        }
+        
+        #innerSwiperContainer .swiper-slide {
+            height: 100%;
+            background-color: #f9f9f9;
+        }
+        
+        #innerSwiperContainer .swiper-pagination-bullet-active {
+            background-color: inherit;
+        }
+        
+        #innerSwiperContainer .swiper-pagination-bullet-active:after {
+            background-color: #4087bf;
+            height: 4px;
+            margin-top: -1px;
+        }
+        
+        .inner-content {
+            position: absolute;
+            left: 12%;
+            top: 35%;
+            margin-top: -70px;
+            text-align: left;
+        }
+        
+        .inner-title {
+            font-size: 30px;
+        }
+        
+        .inner-text {
+            font-size: 14px;
+            line-height: 26px;
+        }
+        
+        .inner-image {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 350px;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: center 20%;
+        }
+        
+        @media(max-width: 1605px) {
+            .swiper-slide .content .title {
+                font-size: 26px;
+            }
+            .swiper-slide .content .text {
+                font-size: 13px;
+                line-height: 26px;
+            }
+            .inner-content {
+                left: 15%;
+                top: 38%;
+            }
+            .inner-image {
+                right: 5%;
+            }
+            .inner-title {
+                font-size: 27px;
+            }
+            .inner-text {
+                font-size: 13px;
+                line-height: 26px;
+            }
+        }
+        
+        @media(max-width: 1445px) {
+            .swiper-slide .content .title {
+                font-size: 24px;
+            }
+            .swiper-slide .content .text {
+                font-size: 12px;
+                line-height: 24px;
+            }
+            .swiper-slide:nth-child(2) .content {
+                left: 8%;
+                top: 40%;
+            }
+            .inner-content {
+                left: 15%;
+                top: 38%;
+            }
+            .inner-image {
+                right: 5%;
+            }
+            .inner-title {
+                font-size: 24px;
+            }
+            .inner-text {
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+        
+        @media(max-width: 1285px) {
+            .swiper-slide:nth-child(1) .content .title {
+                font-size: 55px;
+            }
+            .swiper-slide:nth-child(1) .content{
+                margin-left: -165px;
+            }
+        }
+        @media(max-width: 1030px) {
+            .swiper-slide:nth-child(1) .content .title {
+                font-size: 45px;
+            }
+            .swiper-slide:nth-child(1) .content{
+                margin-left: -133px;
+            }
+            .swiper-slide .content .title {
+                font-size: 20px;
+            }
+            .swiper-slide .content .text {
+                font-size: 12px;
+                line-height: 22px;
+            }
+            .swiper-slide:nth-child(3) .content{
+                margin-top: -105px;
+            }
+            .inner-image {
+                background-size: auto 100%;
+            }
+            .inner-content {
+                top: 40%;
+            }
+            .inner-title {
+                font-size: 20px;
+            }
+            .inner-text {
+                line-height: 20px;
+            }
+        }
+        </style>
+        </style>
 </head>
 
 <body>
     <div class="wrap">
         <% include layout/nav.ejs %>
-        <!-- swiper -->
-        <div id="swiperContainerMain" class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_01.jpg);">
-                    <div class="content">
-                        <div class="title">New Series S</div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_02.jpg);">
-                    <div class="content">
-                        <div class="title">诺博 · 全新S系列移动工作站
-                        </div>
-                        <div class="text">
-                            <br>诺博移动工作站全新s系列秉承诺博clean、simple、smart的设计理念，专
-                            <br>为医护人员移动工作设计，让医护人员可以专注于真正重要的事情 – 照顾
-                            <br>好病人。S series高度整合了高集成计算机、无线通信、智能电源管理、移
-                            <br>动管理技术，适合多种临床工作环境：无论是门诊、急诊、手术室还是ICU
-                            <br>和病区，帮助临床医护工作者实现移动查房、移动护理、移动监护、床旁
-                            <br>检 测等工作。
+            <!-- swiper -->
+            <div id="swiperContainerMain" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_01.jpg);">
+                        <div class="content">
+                            <div class="title">New Series S</div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_03.jpg);">
-                    <div class="content">
-                        <div class="title">
-                            一体化台面
-                            <br> 人体工学与临床应用完美结合
-                        </div>
-                        <div class="text">
-                            <br>台面包含主机最厚处不到100mm，更显灵动简洁
-                            <br>认证的医疗专用抑菌材料，耐受医疗消毒剂，防止交叉感染
-                            <br>专利功能设计使台面可用面积最大化
-                            <br>增加可扩展台面，放置更多常用器械
-                            <br>台面键盘同平面，更适合医护人员操作键盘
-                            <br>360°环绕把手，各角度轻松掌握
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_04.jpg);">
-                    <div class="content">
-                        <div class="title">
-                            更轻便 · 更小巧 · 更易推
-                        </div>
-                        <div class="text">
-                            <br>精巧底座，适合各种狭窄走道，便于直接推入床旁
-                            <br>自动/手动升降，保障医护人员操作舒适
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_05.jpg);">
-                    <div class="content">
-                        <div class="title">
-                            技术创新 · 保障医疗应用及质量
-                        </div>
-                        <div class="text">
-                            <br>创新的24小时不间断电源方案，保障临床应用
-                            <br>专利电源管理系统，有效提升电池质量及寿命
-                            <br>快速充电技术，增加临床使用时间
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-color: #f9f9f9;">
-                    <div id="innerSwiper" class="inner-swiper" style="background-color: #f9f9f9;">
-                        <div id="innerSwiperContainer" class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="inner-content">
-                                        <div class="inner-title">S1000</div>
-                                        <div class="inner-text">
-                                            <br>适用于病区医生短时床旁查房，搭载床旁检测设备
-                                            <br> 可搭载平板电脑（自配）
-                                            <br> 智能电源系统（选配）
-                                            <br> 定制化抽屉及配件
-                                            <br>
-                                        </div>
-                                    </div>
-                                    <div class="inner-image" style="background-image: url(/images/case_detail/series/inner-1.jpg);"></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="inner-content">
-                                        <div class="inner-title">S2000</div>
-                                        <div class="inner-text">
-                                            <br>可搭载手提电脑（自配）
-                                            <br>智能电源系统（选配 ）
-                                            <br>适用于病区医生短时床旁查房，
-                                            <br>搭载床旁检测设备
-                                            <br>
-                                        </div>
-                                    </div>
-                                    <div class="inner-image" style="background-image: url(/images/case_detail/series/inner-2.jpg);"></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="inner-content">
-                                        <div class="inner-title">S2000</div>
-                                        <div class="inner-text">
-                                            <br>诺博高集成计算机
-                                            <br> 智能电源系统（双电池配置）
-                                            <br> 定制化抽屉及配件
-                                            <br> 适用于病区医生床旁移动查房、教学查房，
-                                            <br>搭载床旁检测设备
-                                        </div>
-                                    </div>
-                                    <div class="inner-image" style="background-image: url(/images/case_detail/series/inner-3.jpg);"></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="inner-content">
-                                        <div class="inner-title">S2000</div>
-                                        <div class="inner-text">
-                                            <br>诺博高集成计算机
-                                            <br>智能电源系统（双电池配置）
-                                            <br>大容量护理用柜
-                                            <br>定制化配件
-                                            <br>适用于病区移动护理
-                                        </div>
-                                    </div>
-                                    <div class="inner-image" style="background-image: url(/images/case_detail/series/inner-4.jpg);"></div>
-                                </div>
+                    <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_02.jpg);">
+                        <div class="content">
+                            <div class="title">诺博 · 全新S系列移动工作站
                             </div>
-                            <!-- Add Pagination -->
-                            <div id="innerSwiperPagination" class="swiper-pagination swiper-pagination-white"></div>
+                            <div class="text">
+                                <br>诺博移动工作站全新s系列秉承诺博clean、simple、smart的设计理念，专
+                                <br>为医护人员移动工作设计，让医护人员可以专注于真正重要的事情 – 照顾
+                                <br>好病人。S series高度整合了高集成计算机、无线通信、智能电源管理、移
+                                <br>动管理技术，适合多种临床工作环境：无论是门诊、急诊、手术室还是ICU
+                                <br>和病区，帮助临床医护工作者实现移动查房、移动护理、移动监护、床旁
+                                <br>检 测等工作。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_03.jpg);">
+                        <div class="content">
+                            <div class="title">
+                                一体化台面
+                                <br> 人体工学与临床应用完美结合
+                            </div>
+                            <div class="text">
+                                <br>台面包含主机最厚处不到100mm，更显灵动简洁
+                                <br>认证的医疗专用抑菌材料，耐受医疗消毒剂，防止交叉感染
+                                <br>专利功能设计使台面可用面积最大化
+                                <br>增加可扩展台面，放置更多常用器械
+                                <br>台面键盘同平面，更适合医护人员操作键盘
+                                <br>360°环绕把手，各角度轻松掌握
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_04.jpg);">
+                        <div class="content">
+                            <div class="title">
+                                更轻便 · 更小巧 · 更易推
+                            </div>
+                            <div class="text">
+                                <br>精巧底座，适合各种狭窄走道，便于直接推入床旁
+                                <br>自动/手动升降，保障医护人员操作舒适
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(/images/case_detail/series/SeriesS_05.jpg);">
+                        <div class="content">
+                            <div class="title">
+                                技术创新 · 保障医疗应用及质量
+                            </div>
+                            <div class="text">
+                                <br>创新的24小时不间断电源方案，保障临床应用
+                                <br>专利电源管理系统，有效提升电池质量及寿命
+                                <br>快速充电技术，增加临床使用时间
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-color: #f9f9f9;">
+                        <div id="innerSwiper" class="inner-swiper" style="background-color: #f9f9f9;">
+                            <div id="innerSwiperContainer" class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="inner-content">
+                                            <div class="inner-title">S1000</div>
+                                            <div class="inner-text">
+                                                <br>适用于病区医生短时床旁查房，搭载床旁检测设备
+                                                <br> 可搭载平板电脑（自配）
+                                                <br> 智能电源系统（选配）
+                                                <br> 定制化抽屉及配件
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="inner-image" style="background-image: url(/images/case_detail/series/inner-1.jpg);"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inner-content">
+                                            <div class="inner-title">S2000</div>
+                                            <div class="inner-text">
+                                                <br>可搭载手提电脑（自配）
+                                                <br>智能电源系统（选配 ）
+                                                <br>适用于病区医生短时床旁查房，
+                                                <br>搭载床旁检测设备
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="inner-image" style="background-image: url(/images/case_detail/series/inner-2.jpg);"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inner-content">
+                                            <div class="inner-title">S2000</div>
+                                            <div class="inner-text">
+                                                <br>诺博高集成计算机
+                                                <br> 智能电源系统（双电池配置）
+                                                <br> 定制化抽屉及配件
+                                                <br> 适用于病区医生床旁移动查房、教学查房，
+                                                <br>搭载床旁检测设备
+                                            </div>
+                                        </div>
+                                        <div class="inner-image" style="background-image: url(/images/case_detail/series/inner-3.jpg);"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inner-content">
+                                            <div class="inner-title">S2000</div>
+                                            <div class="inner-text">
+                                                <br>诺博高集成计算机
+                                                <br>智能电源系统（双电池配置）
+                                                <br>大容量护理用柜
+                                                <br>定制化配件
+                                                <br>适用于病区移动护理
+                                            </div>
+                                        </div>
+                                        <div class="inner-image" style="background-image: url(/images/case_detail/series/inner-4.jpg);"></div>
+                                    </div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div id="innerSwiperPagination" class="swiper-pagination swiper-pagination-white"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Add Pagination -->
+                <div id="swiperPagination" class="swiper-pagination"></div>
             </div>
-            <!-- Add Pagination -->
-            <div id="swiperPagination" class="swiper-pagination"></div>
-        </div>
-        <!-- swiper结束 -->
-        <% include layout/views_footer.ejs %>
+            <!-- swiper结束 -->
+            <% include layout/views_footer.ejs %>
     </div>
     <!-- /#wrapper -->
     <% include layout/views_js.ejs %>
-    <script src="/js/swiper.jquery.min.js"></script>
-    <script type="text/javascript">
-    $(function() {
+        <script src="/js/swiper.jquery.min.js"></script>
+        <script type="text/javascript">
+        $(function() {
 
-        //设置inner－swiper
-        var h = $(window).height();
-        $("#innerSwiperContainer").height(h * 0.8).css({
-            marginTop: (h * 0.15) + "px"
-        });
+            //设置inner－swiper
+            var h = $(window).height();
+            $("#innerSwiperContainer").height(h * 0.8).css({
+                marginTop: (h * 0.15) + "px"
+            });
 
-        var swiper = new Swiper('#swiperContainerMain', {
-            pagination: '#swiperPagination',
-            direction: 'vertical',
-            slidesPerView: 1,
-            paginationClickable: true,
-            spaceBetween: 0,
-            mousewheelControl: true,
-            onSlideChangeEnd: function(swiper) {
-                if (swiper.isEnd) {
-                    swiper.disableMousewheelControl();
-                    $(window).scrollTop(1);
+            var swiper = new Swiper('#swiperContainerMain', {
+                pagination: '#swiperPagination',
+                direction: 'vertical',
+                slidesPerView: 1,
+                paginationClickable: true,
+                spaceBetween: 0,
+                mousewheelControl: true,
+                onSlideChangeEnd: function(swiper) {
+                    if (swiper.isEnd) {
+                        swiper.disableMousewheelControl();
+                        $(window).scrollTop(1);
+                    }
                 }
-            }
-        });
+            });
 
-        var innerSwiper = new Swiper('#innerSwiperContainer', {
-            pagination: '#innerSwiperPagination',
-            paginationClickable: '#innerSwiperPagination',
-            spaceBetween: 0,
-            effect: 'fade',
-            paginationBulletRender: function(index, className) {
-                return '<span class="' + className + '">' + "S" + (index + 1) + "000" + '</span>';
-            }
+            var innerSwiper = new Swiper('#innerSwiperContainer', {
+                pagination: '#innerSwiperPagination',
+                paginationClickable: '#innerSwiperPagination',
+                spaceBetween: 0,
+                effect: 'fade',
+                paginationBulletRender: function(index, className) {
+                    return '<span class="' + className + '">' + "S" + (index + 1) + "000" + '</span>';
+                }
 
+            });
+            $(".wrap").css("visibility", "visible");
+            $(window).scroll(function() {
+                if ($(this).scrollTop() <= 0) {
+                    swiper.enableMousewheelControl();
+                }
+            });
         });
-        $(".wrap").css("visibility", "visible");
-        $(window).scroll(function() {
-            if ($(this).scrollTop() <= 0) {
-                swiper.enableMousewheelControl();
-            }
-        });
-    });
-    </script>
+        </script>
 </body>
 
 </html>

@@ -4,10 +4,6 @@
 <head>
     <% include layout/views_header.ejs %>
         <style type="text/css">
-        .wrap {
-            visibility: visible;
-        }
-        
         .row {
             margin-left: -15px;
             margin-right: -15px;
@@ -83,6 +79,22 @@
             margin: 5px auto 0;
             border-radius: 15px;
             background-color: #ff4343;
+        }
+        
+        @media(max-width:1030px) {
+            .solution-inner-content{
+                bottom:5%;
+            }
+            .title-cn {
+                font-size: 14px;
+                line-height: 30px;
+            }
+            .title-en {
+                font-size: 26px;
+            }
+            .isnew{
+                font-size: 12px;
+            }
         }
         </style>
 </head>
