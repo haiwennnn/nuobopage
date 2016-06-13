@@ -52,12 +52,22 @@
             line-height: 26px;
             font-size: 22px;
         }
-        @media(max-width: 1285px){
-            .right .text p.title{
+        
+        @media(max-width: 1285px) {
+            .right .text p.title {
                 font-size: 20px;
             }
-            .right .text p{
+            .right .text p {
                 font-size: 13px;
+            }
+        }
+        @media(max-width: 450px) {
+            .right .text p.title {
+                font-size: 16px;
+            }
+            .right .text p {
+                font-size: 13px;
+                margin-bottom: 5px;
             }
         }
         </style>
@@ -128,6 +138,21 @@
     </div>
     <!-- /#wrapper -->
     <% include layout/views_js.ejs %>
+        <script>
+        $(function() {
+            //alert($(window).width());
+            var leftWidth = $(".left:eq(0)").width();
+            if (leftWidth < 680 && leftWidth >= 500) {
+                var leftHeight = leftWidth / 2.5;
+            } else if (leftWidth < 500) {
+                var leftHeight = leftWidth / 1.8;
+            }
+            $(".case-list").height(leftHeight);
+            $(".case-item").height(leftHeight);
+            $(".right").css({
+                lineHeight: leftHeight + "px"
+            });
+        });
         </script>
 </body>
 

@@ -93,6 +93,24 @@
                 line-height: 22px;
             }
         }
+        @media(max-width: 450px) {
+            .inner-content {
+                width:92%;
+                left: 4%;
+                padding: 10px;
+            }
+            .text p {
+                line-height: 20px;
+            }
+            /*.title {
+                line-height: 20px;
+                font-size: 16px;
+            }
+            .text p {
+                font-size: 12px;
+                line-height: 22px;
+            }*/
+        }
         </style>
 </head>
 
@@ -121,10 +139,13 @@
         $(function() {
             var h = $(window).height(),
                 w = $(window).width();
-            if (w < 1030) {
+            if (w < 1030 && w > 500) {
                 h = h > 670 ? h : 670;
                 $("#about").height(h - 145);
                 $("#innerContent").height((h - 145) * 0.7).css("top", ((h - 145) * 0.15) + "px");
+            } else if(w <= 500){
+                $("#about").height(h);
+                $("#innerContent").height((h - 50) * 0.9).css("top", (h * 0.05 + 30) + "px");
             } else {
                 $("#about").height(h - 145);
                 $("#innerContent").height((h - 145) * 0.7).css("top", ((h - 145) * 0.15) + "px");
