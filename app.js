@@ -6,12 +6,15 @@ var render = require('koa-ejs');
 var session = require('koa-session');
 var path = require('path');
 var mongoose = require('mongoose');
+var gzip = require('koa-gzip');
 
 //自定义库
 var uploadImg = require('./lib/uploadImg.js');
 
 global.basepath = __dirname;
 global.uploadPath = "/public/uploads";
+
+app.use(gzip());
 
 //载入路由文件
 //前台界面路由
