@@ -74,4 +74,4 @@ router.use("/admin", Admin_index.routes(), Admin_index.allowedMethods());
 // 插入根路由  
 app.use(router.routes());
 
-if (!module.parent) app.listen(3000);
+if (!module.parent) app.listen(80);
